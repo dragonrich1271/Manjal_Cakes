@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VOID — Streetwear</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">VOID</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#featured" class="nav-link">Featured</a></li>
+      <li><a href="#shop" class="nav-link">Shop</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-noise"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span class="dot"></span> NEW DROP — SS25</div>
+      <h1 class="hero-title">
+        <span class="line-reveal">WEAR</span>
+        <span class="line-reveal delay-1">THE</span>
+        <span class="line-reveal delay-2 accent-text">VOID</span>
+      </h1>
+      <p class="hero-sub">Uncompromising streetwear for those who move in silence.<br>Drop 01 — Limited to 200 pieces.</p>
+      <div class="hero-cta">
+        <a href="#shop" class="btn-primary">Shop Now</a>
+        <a href="#featured" class="btn-ghost">View Lookbook</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-badge">
+      <svg viewBox="0 0 100 100" class="badge-svg">
+        <defs><path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/></defs>
+        <text font-size="11.5" fill="currentColor" font-family="Space Mono, monospace" letter-spacing="3">
+          <textPath href="#circle">STREETWEAR · DROP 01 · SS25 · </textPath>
+        </text>
+      </svg>
+      <div class="badge-center">★</div>
+    </div>
+  </section>
+
+  <!-- MARQUEE TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>FREE SHIPPING OVER $150</span><span class="ticker-dot">✦</span>
+      <span>LIMITED DROPS</span><span class="ticker-dot">✦</span>
+      <span>WORLDWIDE SHIPPING</span><span class="ticker-dot">✦</span>
+      <span>SS25 COLLECTION LIVE NOW</span><span class="ticker-dot">✦</span>
+      <span>FREE SHIPPING OVER $150</span><span class="ticker-dot">✦</span>
+      <span>LIMITED DROPS</span><span class="ticker-dot">✦</span>
+      <span>WORLDWIDE SHIPPING</span><span class="ticker-dot">✦</span>
+      <span>SS25 COLLECTION LIVE NOW</span><span class="ticker-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- FEATURED -->
+  <section class="featured" id="featured">
+    <div class="section-header">
+      <span class="section-tag">/ 01</span>
+      <h2 class="section-title">FEATURED<br><em>PIECES</em></h2>
+    </div>
+    <div class="featured-grid">
+      <div class="featured-card big" data-id="1">
+        <div class="featured-img-wrap">
+          <div class="product-img-placeholder p1">
+            <div class="placeholder-inner">
+              <span class="placeholder-label">VOID 001</span>
+              <span class="placeholder-sub">OVERSIZED TEE</span>
+            </div>
+          </div>
+        </div>
+        <div class="featured-info">
+          <h3>Phantom Oversized Tee</h3>
+          <span class="price">$68</span>
+          <button class="btn-view" onclick="openProduct(1)">View Product</button>
+        </div>
+      </div>
+      <div class="featured-card" data-id="2">
+        <div class="featured-img-wrap">
+          <div class="product-img-placeholder p2">
+            <div class="placeholder-inner">
+              <span class="placeholder-label">VOID 002</span>
+              <span class="placeholder-sub">GRAPHIC TEE</span>
+            </div>
+          </div>
+        </div>
+        <div class="featured-info">
+          <h3>Static Graphic Tee</h3>
+          <span class="price">$72</span>
+          <button class="btn-view" onclick="openProduct(2)">View Product</button>
+        </div>
+      </div>
+      <div class="featured-card" data-id="3">
+        <div class="featured-img-wrap">
+          <div class="product-img-placeholder p3">
+            <div class="placeholder-inner">
+              <span class="placeholder-label">VOID 003</span>
+              <span class="placeholder-sub">WASHED TEE</span>
+            </div>
+          </div>
+        </div>
+        <div class="featured-info">
+          <h3>Acid Washed Essential</h3>
+          <span class="price">$64</span>
+          <button class="btn-view" onclick="openProduct(3)">View Product</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="shop" id="shop">
+    <div class="section-header">
+      <span class="section-tag">/ 02</span>
+      <h2 class="section-title">THE<br><em>FULL DROP</em></h2>
+    </div>
+
+    <div class="shop-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="oversized">Oversized</button>
+      <button class="filter-btn" data-filter="graphic">Graphic</button>
+      <button class="filter-btn" data-filter="essential">Essential</button>
+    </div>
+
+    <div class="shop-grid" id="shopGrid">
+      <!-- Products injected by JS -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-noise"></div>
+    <div class="about-content">
+      <div class="about-left">
+        <span class="section-tag">/ 03</span>
+        <h2 class="about-title">NOT FOR<br><em>EVERYONE.</em></h2>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">2021</span><span class="stat-label">Founded</span></div>
+          <div class="stat"><span class="stat-num">200</span><span class="stat-label">Pieces/Drop</span></div>
+          <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Countries</span></div>
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="about-body">VOID was built for those who operate outside the noise — the ones who've grown tired of trends, oversaturation, and fast fashion noise. We make pieces you'll actually wear, in fabrics that last.</p>
+        <p class="about-body">Every garment is produced in limited quantities. No restocks. No compromises. Each drop is a statement — wear it or miss it.</p>
+        <p class="about-manifesto">"SILENCE IS THE NEW LOUD."</p>
+      </div>
+    </div>
+    <div class="about-img-strip">
+      <div class="strip-block s1"></div>
+      <div class="strip-block s2"></div>
+      <div class="strip-block s3"></div>
+      <div class="strip-block s4"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <span class="section-tag">/ 04</span>
+      <h2 class="section-title">GET IN<br><em>TOUCH</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-label">EMAIL</span>
+          <span class="contact-value">drop@voidwear.co</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">INSTAGRAM</span>
+          <span class="contact-value">@voidwear</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">PRESS</span>
+          <span class="contact-value">press@voidwear.co</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">STOCKISTS</span>
+          <span class="contact-value">DM us on IG</span>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <input type="text" id="formName" placeholder="Your Name" required />
+          <label for="formName">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="formEmail" placeholder="Email Address" required />
+          <label for="formEmail">Email Address</label>
+        </div>
+        <div class="form-group">
+          <textarea id="formMsg" placeholder="Your Message" rows="4" required></textarea>
+          <label for="formMsg">Your Message</label>
+        </div>
+        <button type="submit" class="btn-primary full-width">Send Message</button>
+        <div class="form-success" id="formSuccess">Message sent — we'll get back to you.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">VOID</div>
+      <div class="footer-tagline">Wear The Silence.</div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 VOID Streetwear. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal" id="productModal">
+      <button class="modal-close" id="modalClose" onclick="closeProductModal()">✕</button>
+      <div class="modal-body">
+        <div class="modal-img">
+          <div class="modal-img-placeholder" id="modalImg">
+            <div class="placeholder-inner">
+              <span class="placeholder-label" id="modalImgLabel">VOID</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-info">
+          <span class="modal-tag" id="modalTag">GRAPHIC TEE</span>
+          <h2 class="modal-title" id="modalTitle">Product Name</h2>
+          <p class="modal-price" id="modalPrice">$00</p>
+          <p class="modal-desc" id="modalDesc">Description here.</p>
+          <div class="modal-sizes">
+            <span class="modal-label">SIZE</span>
+            <div class="size-options" id="sizeOptions">
+              <button class="size-btn" data-size="XS">XS</button>
+              <button class="size-btn" data-size="S">S</button>
+              <button class="size-btn active" data-size="M">M</button>
+              <button class="size-btn" data-size="L">L</button>
+              <button class="size-btn" data-size="XL">XL</button>
+            </div>
+          </div>
+          <div class="modal-qty">
+            <span class="modal-label">QTY</span>
+            <div class="qty-controls">
+              <button onclick="changeQty(-1)">−</button>
+              <span id="qtyDisplay">1</span>
+              <button onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+          <button class="btn-primary full-width" id="addToCartBtn" onclick="addToCartFromModal()">Add to Cart</button>
+          <div class="modal-meta">
+            <span>✦ Free shipping over $150</span>
+            <span>✦ Limited to 200 pieces</span>
+            <span>✦ 100% heavyweight cotton</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCartDrawer(event)">
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <h2>YOUR CART</h2>
+        <button onclick="toggleCart()" class="cart-close">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <!-- Items injected by JS -->
+      </div>
+      <div class="cart-footer" id="cartFooter">
+        <div class="cart-total">
+          <span>TOTAL</span>
+          <span id="cartTotal">$0</span>
+        </div>
+        <button class="btn-primary full-width" onclick="checkout()">Checkout</button>
+        <p class="cart-note">Free shipping on orders over $150</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
